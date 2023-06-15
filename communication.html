@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+<body>
+<div class="rectangle">
+      <a href="login-user.html" class="logout-icon">
+        <i class="fas fa-arrow-left"></i>
+        <i class="fas fa-user"></i>
+      </a>
+      <div class="circle">
+        <img src="./images/person.png" alt="Image">
+      </div>
+      <input type="text" class="search-bar" placeholder="Search">
+</div>
+  <ul class="nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#">Information</a></li>
+    <li><a href="onlinePortal.html">Online Portal</a></li>
+    <li><a href="communication.html">Communication</a></li>
+  </ul>
+<div class="overall-div-home" style="background-color: white;">
+    <div >
+        <img src="./images/message.png" onclick="openMessage()">
+        <span>Message US</span>
+        <img src="./images/announcement.png" onclick="openAnnouncement()">
+        <span>Announcement</span>
+        <div>
+        <img src="./images/forum.png" onclick="openForums()">
+        <span>Forums</span>
+        <img src="./images/discussion.png" onclick="openDiscussions()">
+        <span>Discussions</span>
+        <img src="./images/feedback.png" onclick="openFeedbacks()">
+        <span>Feedbacks</span>
+    </div>
+
+
+<div class="overlay" id="MessageOverlay">
+    <div class="modal">
+      <form class="comForm">
+        <textarea rows="5" cols="50" placeholder="Type your message here..."></textarea><br>
+        <input id="post-button" type="submit" value="Send">
+      </form>
+      <span class="close-button" onclick="closeMessage()">X</span>
+    </div>
+  </div>
+
+  <div class="overlay" id="AnnouncementOverlay">
+  <div class="modal">
+    <form class="comForm">
+      <textarea rows="5" cols="50" placeholder="Type your announcement here..."></textarea><br>
+      <input id="post-button" type="submit" value="Post">
+    </form>
+    <span class="close-button" onclick="closeAnnouncement()">X</span>
+  </div>
+</div>
+
+<div class="overlay" id="ForumsOverlay">
+    <div class="modal">
+      <form class="comForm">
+        <div class="container2">
+        <textarea class="text" placeholder="Hey!, What's Up? Can you help me?"></textarea>
+        <textarea class="text2" placeholder="Enter your forum here..."></textarea>
+        <input id="post-button2" type="submit" value="Send">
+    </div>
+      </form>
+      <span class="close-button" onclick="closeForums()">X</span>
+    </div>
+  </div>
+
+  <div class="overlay" id="DiscussionsOverlay">
+    <div class="modal">
+      <form class="comForm">
+        <div class="icon3">
+        <img src="./images/person.png">
+        <img src="./images/person.png">
+        <img src="./images/person.png">
+        <img src="./images/plus.png">
+    </div>
+        <textarea rows="5" cols="50" placeholder="What's new?"></textarea><br>
+        <textarea   rows="1" cols="50" placeholder="Enter your discussion here..."></textarea>
+        <input id="post-button2" type="submit" value="Send">
+      </form>
+      <span class="close-button" onclick="closeDiscussions()">X</span>
+    </div>
+  </div>
+
+  <div class="overlay" id="FeedbacksOverlay">
+    <div class="modal">
+      <form class="comForm">
+        <p>How would you rate this?</p>
+        <div class="icon3">
+            
+            <img src="./images/star1.png">
+            <img src="./images/star.png">
+            <img src="./images/star.png">
+            <img src="./images/star.png">
+            <img src="./images/star.png">
+        </div>
+        <textarea rows="5" cols="50" placeholder="Write your comment here..."></textarea><br>
+        <input id="post-button" type="submit" value="Send">
+      </form>
+      <span class="close-button" onclick="closeFeedbacks()">X</span>
+    </div>
+  </div>
+
+
+<script src="./script.js"></script>
+</body>
+</html>
